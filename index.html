@@ -60,8 +60,8 @@
 import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/build/three.module.js';
 import {EffectComposer} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/postprocessing/EffectComposer.js';
 import {RenderPass} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/postprocessing/RenderPass.js';
-import {BloomPass} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/postprocessing/BloomPass.js';
-import {FilmPass} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/postprocessing/FilmPass.js';
+// import {BloomPass} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/postprocessing/BloomPass.js';
+// import {FilmPass} from 'https://threejsfundamentals.org/threejs/resources/threejs/r110/examples/jsm/postprocessing/FilmPass.js';
 import {CustomPass} from './postprocessing/CustomPass.js';
 
 import {GUI} from 'https://threejsfundamentals.org/threejs/../3rdparty/dat.gui.module.js';
@@ -191,20 +191,20 @@ function main() {
 	  const composer = new EffectComposer(renderer);
 	  composer.addPass(new RenderPass(scene, camera));
 
-	  const bloomPass = new BloomPass(
-	      1,    // strength
-	      25,   // kernel size
-	      4,    // sigma ?
-	      256,  // blur render target resolution
-	  );
-	  composer.addPass(bloomPass);
+// 	  const bloomPass = new BloomPass(
+// 	      1,    // strength
+// 	      25,   // kernel size
+// 	      4,    // sigma ?
+// 	      256,  // blur render target resolution
+// 	  );
+// 	  composer.addPass(bloomPass);
 
-	  const filmPass = new FilmPass(
-	      0.35,   // noise intensity
-	      0.025,  // scanline intensity
-	      648,    // scanline count
-	      false,  // grayscale
-	  );
+// 	  const filmPass = new FilmPass(
+// 	      0.35,   // noise intensity
+// 	      0.025,  // scanline intensity
+// 	      648,    // scanline count
+// 	      false,  // grayscale
+// 	  );
 
 		const customPass = new CustomPass(
 	      1.   // our cool value
